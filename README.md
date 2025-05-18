@@ -4,6 +4,8 @@ This is a proof-of-concept for generating technical reports that combine writing
 
 This project was created using [Desktop Commander](https://desktopcommander.app/) as an exploration for the article [Hi Eduard, thanks very much for replying](https://medium.com/@tdcwilliams/hi-eduard-thanks-very-much-for-replying-2c252f6e3546).
 
+You can find the source code on GitHub: [github.com/wonderwhy-er/technical-report-generator](https://github.com/wonderwhy-er/technical-report-generator)
+
 ## Components
 
 1. **generate_figures.py**: Python script that creates sample data visualizations and generates a LaTeX table
