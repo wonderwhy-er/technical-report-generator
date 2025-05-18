@@ -6,6 +6,8 @@ This project was created using [Desktop Commander](https://desktopcommander.app/
 
 You can find the source code on GitHub: [github.com/wonderwhy-er/technical-report-generator](https://github.com/wonderwhy-er/technical-report-generator)
 
+This project was generated through a conversation with Claude AI: [View the Claude chat](https://claude.ai/share/e28ba915-3df0-4bd8-8038-e581acd39051)
+
 ## Components
 
 1. **generate_figures.py**: Python script that creates sample data visualizations and generates a LaTeX table
