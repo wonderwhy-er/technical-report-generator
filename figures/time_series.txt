@@ -1,0 +1,27 @@
+Temperature Time Series: Model vs Observations
+============================================================
+
+26.5°C |      o o                     
+      |         xo                   
+      |      xxxox                   
+      |    ox o   oo                 
+      |     o      x                 
+      |                              
+      |   x         x                
+      |  oo         oo               
+      |              x               
+      | x             o              
+15.8°C |oo                            
+      |                              
+      |                o             
+      |                              
+      |                 x            
+      |                 oo          x
+      |                  xx       o o
+      |                            o 
+      |                   oo o   ox  
+5.0°C |                     x oox    
+      +------------------------------
+       01/0406/0411/0416/0421/0426/04
+
+Legend: o = Observations, x = Model

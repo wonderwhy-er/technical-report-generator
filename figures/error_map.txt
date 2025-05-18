@@ -1,0 +1,28 @@
+Spatial Error Distribution
+============================================================
+
+.. xXX#########XXx .
+. xXX###########XXx 
+ xX###############Xx
+xX######XXXXX######X
+XX####Xx ... xX####X
+X####X .ooooo. X####
+####X .o+++++o. X###
+####x.o+++++++o.x###
+###X o+++++++++o X##
+###X.o++++o++++o.X##
+###X.o+++o o+++o.X##
+###X.o++++o++++o.X##
+###X o+++++++++o X##
+####x.o+++++++o.x###
+####X .o+++++o. X###
+X####X .ooooo. X####
+XX####Xx ... xX####X
+xX######XXXXX######X
+ xX###############Xx
+. xXX###########XXx 
+
+Legend:
+  + o . : Positive errors (observations > model)
+  # X x : Negative errors (observations < model)
+  Range: -0.79 to 1.49

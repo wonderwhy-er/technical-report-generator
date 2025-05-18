@@ -1,0 +1,37 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: matplotlib
+%%Title: Placeholder Error Map
+%%BoundingBox: 0 0 600 400
+%%DocumentData: Clean7Bit
+%%Pages: 1
+%%EndComments
+
+/Times-Roman findfont 14 scalefont setfont
+50 350 moveto
+(Error Map Placeholder) show
+
+% Draw a simple contour representation
+100 100 moveto
+200 300 lineto
+300 150 lineto
+400 250 lineto
+500 100 lineto
+100 100 lineto
+stroke
+
+% Draw axis
+50 50 moveto
+550 50 lineto
+50 50 moveto
+50 350 lineto
+stroke
+
+% X-axis label
+300 25 moveto
+(Longitude) show
+
+% Y-axis label
+25 200 moveto
+90 rotate
+(Latitude) show
+-90 rotate

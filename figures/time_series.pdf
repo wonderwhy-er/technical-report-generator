@@ -1,0 +1,33 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: matplotlib
+%%Title: Placeholder Time Series Plot
+%%BoundingBox: 0 0 600 400
+%%DocumentData: Clean7Bit
+%%Pages: 1
+%%EndComments
+
+/Times-Roman findfont 14 scalefont setfont
+50 350 moveto
+(Time Series Plot Placeholder) show
+
+100 200 moveto
+300 250 lineto
+500 180 lineto
+stroke
+
+% Draw axis
+50 50 moveto
+550 50 lineto
+50 50 moveto
+50 350 lineto
+stroke
+
+% X-axis label
+300 25 moveto
+(Time) show
+
+% Y-axis label
+25 200 moveto
+90 rotate
+(Value) show
+-90 rotate

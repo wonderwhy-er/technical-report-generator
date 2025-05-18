@@ -1,0 +1,54 @@
+# Technical Analysis Report
+# Author: Eduard Ruzga
+# Date: May 18, 2025
+
+## Abstract
+
+This document demonstrates a workflow for generating reports that combine technical writing with programmatically generated figures and tables. This template is designed for scientific or technical reports that require data visualization and analysis.
+
+## Introduction
+
+This document demonstrates an automated workflow for creating technical reports with embedded figures and tables generated from data. It combines the power of LaTeX for document preparation with Python for data processing and visualization.
+
+The workflow consists of:
+- Python scripts that process data and generate figures
+- LaTeX document that includes the generated figures
+- Makefile or shell script that automates the process
+
+## Time Series Analysis
+
+Figure 1 shows a comparison between observed temperature data and model predictions over a one-year period. The model generally follows the seasonal pattern, but there are some discrepancies, particularly during extreme temperature events.
+
+[FIGURE 1: Temperature time series comparison between observations and model predictions.]
+
+## Spatial Error Analysis
+
+The spatial distribution of errors between observations and model predictions is shown in Figure 2. Areas with positive values indicate where the model underestimates observations, while negative values show overestimation.
+
+[FIGURE 2: Spatial distribution of errors between observations and model predictions.]
+
+## Regional Performance Statistics
+
+Table 1 summarizes the model performance metrics across different regions. The metrics include Root Mean Square Error (RMSE), correlation coefficient, bias, and standard deviation.
+
+Table 1: Statistical Comparison by Region
+--------------------------------------------------------------------
+| Region  | RMSE  | Correlation | Bias   | Std Dev |
+|---------|-------|-------------|--------|---------|
+| North   | 3.24  | 0.85        | -0.32  | 1.45    |
+| South   | 2.17  | 0.91        | 0.18   | 1.23    |
+| East    | 4.01  | 0.78        | -1.21  | 2.11    |
+| West    | 2.65  | 0.88        | 0.42   | 1.76    |
+| Central | 1.98  | 0.93        | 0.05   | 1.12    |
+--------------------------------------------------------------------
+
+## Conclusion
+
+This document demonstrated a workflow for generating technical reports with embedded figures and tables. This approach allows for:
+
+- Reproducible research and analysis
+- Consistent formatting and styling
+- Automated document generation
+- Version control of both code and document
+
+By combining programming for data analysis with LaTeX for document preparation, you can create professional-quality reports efficiently.

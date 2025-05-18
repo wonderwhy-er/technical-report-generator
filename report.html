@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Analysis Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        h2 {
+            color: #3498db;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .author-date {
+            text-align: center;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        pre {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: monospace;
+            white-space: pre;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .conclusion {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f7fa;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Technical Analysis Report</h1>
+    
+    <div class="author-date">
+        <strong>Author:</strong> Eduard Ruzga<br>
+        <strong>Date:</strong> May 18, 2025
+    </div>
+
+    <h2>Abstract</h2>
+    <p>This document demonstrates a workflow for generating reports that combine technical writing with programmatically generated figures and tables. This template is designed for scientific or technical reports that require data visualization and analysis.</p>
+
+    <h2>Introduction</h2>
+    <p>This document demonstrates an automated workflow for creating technical reports with embedded figures and tables generated from data. It combines the power of programming for data analysis with document preparation.</p>
+    
+    <p>The workflow consists of:</p>
+    <ul>
+        <li>Python scripts that process data and generate figures</li>
+        <li>Document template that includes the generated figures</li>
+        <li>Shell script that automates the process</li>
+    </ul>
+
+    <h2>Time Series Analysis</h2>
+    <p>Figure 1 shows a comparison between observed temperature data and model predictions over a one-month period. The model generally follows the seasonal pattern, but there are some discrepancies, particularly during extreme temperature events.</p>
+    
+    <pre id="time-series"></pre>
+
+    <h2>Spatial Error Analysis</h2>
+    <p>The spatial distribution of errors between observations and model predictions is shown in Figure 2. Areas with positive values indicate where the model underestimates observations, while negative values show overestimation.</p>
+    
+    <pre id="error-map"></pre>
+
+    <h2>Regional Performance Statistics</h2>
+    <p>Table 1 summarizes the model performance metrics across different regions. The metrics include Root Mean Square Error (RMSE), correlation coefficient, bias, and standard deviation.</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Region</th>
+                <th>RMSE</th>
+                <th>Correlation</th>
+                <th>Bias</th>
+                <th>Std Dev</th>
+            </tr>
+        </thead>
+        <tbody id="statistics-table">
+            <!-- Table content will be inserted here by script -->
+        </tbody>
+    </table>
+
+    <h2>Conclusion</h2>
+    <div class="conclusion">
+        <p>This document demonstrated a workflow for generating technical reports with embedded figures and tables. This approach allows for:</p>
+        
+        <ul>
+            <li>Reproducible research and analysis</li>
+            <li>Consistent formatting and styling</li>
+            <li>Automated document generation</li>
+            <li>Version control of both code and document</li>
+        </ul>
+        
+        <p>By combining programming for data analysis with document preparation, you can create professional-quality reports efficiently.</p>
+    </div>
+
+    <script>
+        // Helper function to load text file content
+        async function fetchText(url) {
+            try {
+                const response = await fetch(url);
+                return await response.text();
+            } catch (error) {
+                console.error('Error loading file:', error);
+                return 'Error loading content';
+            }
+        }
+
+        // Load the time series data
+        fetchText('figures/time_series.txt')
+            .then(text => {
+                document.getElementById('time-series').textContent = text;
+            });
+
+        // Load the error map data
+        fetchText('figures/error_map.txt')
+            .then(text => {
+                document.getElementById('error-map').textContent = text;
+            });
+
+        // Load the statistics table data
+        fetchText('figures/statistics_table.txt')
+            .then(text => {
+                const lines = text.split('\n').filter(line => line.trim() !== '');
+                
+                // Skip the title and separator lines
+                const dataLines = lines.slice(4);
+                
+                let tableHtml = '';
+                dataLines.forEach(line => {
+                    if (line.startsWith('|')) {
+                        const cells = line.split('|').filter(cell => cell.trim() !== '');
+                        tableHtml += '<tr>';
+                        cells.forEach(cell => {
+                            tableHtml += `<td>${cell.trim()}</td>`;
+                        });
+                        tableHtml += '</tr>';
+                    }
+                });
+                
+                document.getElementById('statistics-table').innerHTML = tableHtml;
+            });
+    </script>
+</body>
+</html>
